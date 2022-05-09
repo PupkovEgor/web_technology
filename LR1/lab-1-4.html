@@ -1,0 +1,25 @@
+<html>
+    <head> <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Пупков Егор ПИ-323</title>
+    </head>
+    <body>
+        <script language="JavaScript" type="text/JavaScript">
+            var x, y;
+            var password = "qwerty";
+            if (password == prompt("Введите пароль","")) {
+                x=parseInt(prompt("Введите значение х",'')); // метод parseInt() переводит строку в целое
+                y=parseInt(prompt("Введите значение у",'')); // число
+                if(x<y) {
+                    alert(" Максимальное число - y");
+                } else if (x=y) {
+                    alert("Введённые числа равны");
+                } 
+                else {
+                    alert(" Максимальное число - x");
+                }
+            } else {
+                alert("Неверный пароль!");
+            }
+        </script>
+    </body>
+</html> 

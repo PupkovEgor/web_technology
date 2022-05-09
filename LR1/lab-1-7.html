@@ -1,0 +1,22 @@
+<html>
+    <head> <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Пупков Егор ПИ-323</title>
+        <script language="JavaScript">
+            function write_Array() {
+                document.write("Точные науки: "+tochn+"<br>");
+                document.write("Гуманитарные науки: "+gumanit+"<br>");
+            } 
+        </script>
+    </head>
+    <body>
+        <h1>Школьные предметы</h1>
+        <script language="JavaScript">
+            year = new Array("Математика","Информатика","Физика","Русский язык","Литература","История");
+            tochn = new Array(); //летние месяцы
+            gumanit = new Array();
+            tochn=year.slice(0,3);
+            gumanit = year.slice(3,6);
+            write_Array();
+        </script>
+    </body>
+</html>
