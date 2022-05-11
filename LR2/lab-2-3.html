@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
+        <script>
+            function right(){
+                $("#img1").animate({left: "+=100px"}, 500);
+            }
+            function left(){
+                $("#img1").animate({left: "-=100px"}, 500);
+            }
+            function up(){
+                $("#img1").animate({top: "-=100px"}, 500);
+            }
+            function down(){
+                $("#img1").animate({top: "+=100px"}, 500);
+            }
+        </script>
+        <style>
+            #img1 {
+                position: absolute;
+                top: 40%;
+                left: 44%;
+                width: 200px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Картинка</h1>
+            <input type="button" name="right" value="Вправо" onclick="right()">
+            <input type="button" name="left" value="Влево" onclick="left()">
+            <input type="button" name="up" value="Вверх" onclick="up()">
+            <input type="button" name="down" value="Вниз" onclick="down()">
+            <img id="img1" src="firt.jpg" alt="firt_image">
+    </body>
+</html>
