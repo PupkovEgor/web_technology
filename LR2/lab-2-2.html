@@ -2,6 +2,10 @@
     <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
     <body>
         <h1>Отправка сообщения</h1>
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous"></script>
         <script lang="javascript">
             var flag_fio = false;
             var flag_pass = false;
@@ -17,74 +21,62 @@
                     alert("Поля заполнены некорректно!");
                 }
             }
-            function clean_field(){
-                document.form1.fio.value="";
-                document.form1.fio.style=""
-                document.form1.password.value="";
-                document.form1.password.style=""
-                document.form1.password2.value="";
-                document.form1.password2.style=""
-                document.form1.email.value="";
-                document.form1.email.style=""
-                document.form1.theme.value="";
-                document.form1.message.value="";
-                document.form1.message.style=""
-            }
+           
             function check_fio(){
-                if (document.form1.fio.value =="") {
-                    document.form1.fio.style="border: 2px red solid";
+                if ($("#fio").val().length == 0) {
+                    $("#fio").css("border-color", "red");
                     flag_fio=false;
                 } else {
-                    document.form1.fio.style="";
+                    $("#fio").css("border-color", "");
                     flag_fio=true;
                 }
             }
             function check_password(){
-                if (document.form1.password.value =="" || document.form1.password.value.length < 4 ) {
-                    document.form1.password.style="border: 2px red solid";
+                if ($("#passw").val().length == 0 || $("#passw").val().length < 4 ) {
+                    $("#passw").css("border-color", "red");
                     flag_pass = false;
                 } else {
-                    document.form1.password.style="";
+                    $("#passw").css("border-color", "");
                     flag_pass=true;
                 }
             }
             function check_password2(){
-                if (document.form1.password2.value =="" || document.form1.password2.value != document.form1.password.value) {
-                    document.form1.password2.style="border: 2px red solid";
+                if ($("#passw2").val().length == 0 || $("#passw2").val() != $("#passw").val()) {
+                    $("#passw2").css("border-color", "red");
                     flag_pass2=false;
                 } else {
-                    document.form1.password2.style="";
+                    $("#passw2").css("border-color", "");
                     flag_pass2=true;
                 }
             }
             function check_email(){
-                if (document.form1.email.value =="" || document.form1.email.value.includes('@') == false) {
-                    document.form1.email.style="border: 2px red solid";
+                if ($("#email").val().length == 0 || $("#email").val().includes('@') == false) {
+                    $("#email").css("border-color", "red");
                     flag_email=false;
                 } else {
-                    document.form1.email.style="";
+                    $("#email").css("border-color", "black");
                     flag_email=true;
                 }
             }
             function check_message(){
-                if (document.form1.message.value =="" || document.form1.message.value.length < 10) {
-                    document.form1.message.style="border: 2px red solid";
+                if ($("#mess").val().length == 0 || $("#mess").val().length < 10) {
+                    $("#mess").css("border-color", "red");
                     flag_mess=false;
                 } else {
-                    document.form1.message.style="";
+                    $("#mess").css("border-color", "black");
                     flag_mess=true;
                 }
             }
         </script>
         <form name="form1">
-            Имя:<input type="text" name="fio" onblur="check_fio()"> <br>
-            Пароль:<input type="password" name="password" onblur="check_password()"> <br>
-            Подтверждение пароля:<input type="password" name="password2" onblur="check_password2()"> <br>
-            Email:<input type="text" name="email" onblur="check_email()"> <br>
+            Имя:<input type="text" name="fio" onblur="check_fio()" id="fio"> <br>
+            Пароль:<input type="password" name="password" onblur="check_password()" id="passw"> <br>
+            Подтверждение пароля:<input type="password" name="password2" onblur="check_password2()" id="passw2"> <br>
+            Email:<input type="text" name="email" onblur="check_email()" id="email"> <br>
             Тема сообщения:<input type="text" name="theme"> <br>
-            Сообщение:<input type="text" name="message" onblur="check_message()"> <br>
+            Сообщение:<input type="text" name="message" onblur="check_message()" id="mess"> <br>
             <input type="button" name="send" value="Отправить" onclick="send_mess()"> <br>
-            <input type="button" name="clean" value="Очистить" onclick="clean_field()">
+            <input type="button" name="clean" value="Очистить" onclick="location.reload()">
         </form>
     </body>
 </html>
