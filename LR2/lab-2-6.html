@@ -19,7 +19,8 @@
                     result = man + woman;
                     resman = Math.round(man*100/result);
                     reswoman = Math.round(woman*100/result);
-                    $("#data").html("Всего проголосовавших: " + result + '<br>' + "Мужчины: " + resman + "%" + '<br>' + "Женщины: " + reswoman + "%");
+                    $("#data").html("Всего проголосовавших: " + result + '<br>' + "Мужчины: "
+                    + resman + "%" + '<br>' + "Женщины: " + reswoman + "%");
                 }
 
             </script>
@@ -29,7 +30,7 @@
             <h1>Опрос</h1>
             <p>Укажите ваш пол:</p>
             <input type="button" name="answer1" id="answ1" value="Мужчина" onclick="res1()">
-            <input type="button" name="answer2" id="answ2" value="Женжина" onclick="res2()"> <br>
+            <input type="button" name="answer2" id="answ2" value="Женщина" onclick="res2()"> <br>
             <input type="button" name="result" id="result" value="Показать результат" onclick="res()">
             <p id = "data"></p>
         </form>

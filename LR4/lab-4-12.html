@@ -1,0 +1,123 @@
+<html>
+<head>
+	<meta meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" type="text/css" href="jquery-ui-1.13.1.custom/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="jquery-ui-1.13.1.custom/jquery-ui.js"></script>
+	<script src="script.js"></script>
+	<title>Аивабилеты</title>
+</head>
+<body>
+	<header class="head">
+
+	</header>
+
+<main class="main">
+
+
+	<div class="content_box">
+		
+		<h1>Авиакомпании</h1>
+
+		<div class="container content" id="acc_con">
+	<div class="stage" id="accordion">
+		<h3>Победа</h3>
+		<div>
+			<img src="pobeda-log.png" alt="Свинина" class="picture">
+			<p>«Победа» — российская бюджетная авиакомпания, дочернее предприятие группы «Аэрофлот — Российские авиалинии», базируется в московском аэропорту Внуково. Основана 16 сентября 2014 года взамен прекратившего полёты из-за санкций Европейского союза «Добролёта». 
+				Суточный налёт самолётов авиакомпании в 2017 году был самым высоким в мире — 15—16 часов, что было выше, чем у крупнейших мировых лоукостеров — американской Southwest и ирландской Ryanair.
+		</div>
+
+		<h3>S7 Airlanes</h3>
+		<div>
+			<img src="logo-s7-airlines.jpg" alt="Баранина" class="picture">
+			<p>S7 Airlines — российская авиакомпания, бывший член глобального авиационного альянса Oneworld, выполняет внутренние и международные пассажирские авиаперевозки, входит в перечень системообразующих организаций РФ, является второй по величине авиакомпанией России.
+		</div>
+
+		<h3>Nordwind Airlines</h3>
+		<div>
+			<img src="C-color.png" alt="Курица" class="picture">
+			<p>Nordwind Airlines — российская авиакомпания, образованная в 2008 году.
+				Наряду с Pegas Fly (Икар) является дочерней авиакомпанией туроператора «Пегас Туристик». Базируется в московском аэропорту Шереметьево.
+				Nordwind Airlines ежегодно входит в десятку крупнейших авиакомпаний страны по количеству перевезенных пассажиров.
+		</div>	
+	</div>
+	<style>
+			.picture{
+				position: relative;
+				width: 200px;
+				height: auto;
+			}
+		</style>
+		</div>
+		<br>
+		<div id="dialog" class="dialog" title="Оформление заказа">
+		<form class="form-inline">
+		<div class="form-group">
+		<label >ФИО</label><br>
+		<input type="text" name="name" id="name">
+		<p>
+
+		<label for="row">Выберите ряд:</label>
+		<input type="text" name="row" id="row">
+		<p>
+		<div id="slider"></div>
+		<p>
+
+		<label for="comp">Выберите компанию:</label>
+		<input type="text" name="comp" list="lst" id="comp">
+		<datalist id="lst">
+		<option value="Победа">
+		<option value="S7 Airlanes">
+		<option value="Nordwind Airlines">
+		</datalist>
+		<p>
+
+		<label for="date">Дата: </label>
+		<input type="text" id="date">
+		<p>
+		<label for="start">Откуда:</label>
+		<input type="text" id="start">
+		<p>
+
+		<label for="finish">Куда:</label>
+		<input type="text" id="finish">
+		<p>
+		<p>
+		</div>
+		</form>
+		</div>
+		<button class="btn" id="open" >Купить билет</button>
+		</div>
+	</div>
+</main>
+
+	<div id="confirm" class="confirm" title="Подтверждение" style="display: none;">
+		<div class="confirmName" id="confirmName">
+			<label for="cN">Билет на имя: </label>
+			<input type="text" name="cN" id="cN">
+			<p>
+			<label for="R">Ряд:</label>
+			<input type="text" name="R" id="R">
+			<p>
+			<label for="C">Компания </label>
+			<input type="text" name="C" id="C">
+			<p>
+			<label for="D">Дата: </label>
+			<input type="text" name="D" id="D">
+			<p>
+			<label for="S">Откуда: </label>
+			<input type="text" name="S" id="S">
+			<p>
+			<label for="F">Куда: </label>
+			<input type="text" name="F" id="F">
+			<p>
+			<label for="Price">Цена: </label>
+			<input type="text" name="Price" id="Price">
+			<h2>Подтвердить покупку билета?</h2>
+		</div>
+	</div>
+
+	<div id="succ" class="succ" title="Уведомление" style="display: none;"><h2>Билеты успешно приобретены!</h2></div>
+</body>
+</html>
